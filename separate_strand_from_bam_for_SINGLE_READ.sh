@@ -67,5 +67,5 @@ while kill -0 $PID 2>/dev/null; do
 	printf "\rExtracting reverse aligned reads ${SPIN:$i:1}"
 	sleep .1
 done
-printf "\nDone!\nBoth strand has been split into two different files!\n"
+printf "\n${GREEN}Done!${NOCOLOR}\nBoth strand has been split into two different files!\n"
 exit 0
