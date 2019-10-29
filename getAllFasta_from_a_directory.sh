@@ -7,9 +7,9 @@ numfile=$(cat filename.tmp | wc -l | sed 's/ //g')
 if [[ $numfile -eq 0 ]]; then
 	printf "Error: The current directory does not present bed file!\n\n"
 elif [[ $numfile -eq 1 ]]; then
-	printf "The current directory present 1 bed file\n\n"
+	printf "The current directory presents 1 bed file\n\n"
 else
-	printf "The current directory present ${numfile} bed files\n\n"
+	printf "The current directory presents ${numfile} bed files\n\n"
 fi
 for (( k = 1; k < ${numfile} +1; k++ )); do
 	filename=$(sed -n $k'p' filename.tmp)
@@ -21,6 +21,6 @@ while kill -0 $PID 2>/dev/null; do
 	printf "\rFasta recovery in process ${SPIN:$i:1} "
 	sleep .1
 done
-printf "\nAll sequences contain in bed files had been recovered in fasta file!\n"
+printf "\nAll sequences contained in bed files had been recovered in fasta file!\n"
 rm filename.tmp
 exit
